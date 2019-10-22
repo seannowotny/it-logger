@@ -1,6 +1,7 @@
 // @flow
 
 import React, { useState } from 'react'
+import TechSelectOptions from '../techs/TechSelectOptions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -67,10 +68,10 @@ const AddLogModal = ({ addLog }) => {
                   className="browser-default" 
                   onChange={e => setTech(e.target.value)}
                   >
-                     <option value="" disabled>Select Technician</option>
-                     <option value="John Doe">John Doe</option>
-                     <option value="Sam Smith">Sam Smith</option>
-                     <option value="Sara Wilson">Sara Wilson</option>
+                     <option value="" disabled>
+                        Select Technician
+                     </option>
+                     <TechSelectOptions />
                   </select>
                </div>
             </div>
