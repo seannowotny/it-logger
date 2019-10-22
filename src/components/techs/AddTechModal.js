@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import M from 'materialize-css/dist/js/materialize.min.js';
-import type { stringState, boolState } from '../types/stateTypes';
+import type { stringState } from '../types/stateTypes';
 
 const AddTechModal = () => {
    //$FlowFixMe
