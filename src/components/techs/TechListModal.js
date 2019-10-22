@@ -1,9 +1,8 @@
 // @flow
 
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import type { boolState } from '../types/stateTypes';
 import TechItem from './TechItem';
 import { getTechs } from '../../actions/techActions';
 

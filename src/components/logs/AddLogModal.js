@@ -20,7 +20,7 @@ const AddLogModal = ({ addLog }) => {
    {
       if(message === '' || tech === '')
       {
-         M.toast({ html: 'Please enter a message and tech' })
+         M.toast({ html: 'Please enter a message and tech' });
       }
       else
       {

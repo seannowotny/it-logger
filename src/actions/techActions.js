@@ -26,7 +26,7 @@ export const getTechs = () => async (dispatch: TechDispatch) =>
    } 
 };
 
-export const addTech = (tech) => async (dispatch: TechDispatch) =>
+export const addTech = (tech: any) => async (dispatch: TechDispatch) =>
 {
    try
    {
@@ -44,6 +44,30 @@ export const addTech = (tech) => async (dispatch: TechDispatch) =>
       dispatch({
          type: 'ADD_TECH',
          payload: data
+      });
+   }
+   catch(err)
+   {
+      dispatch({
+         type: 'TECHS_ERROR',
+         payload: err.response.statusText
+      });
+   } 
+};
+
+export const deleteTech = (id: number) => async (dispatch: TechDispatch) =>
+{
+   try
+   {
+      setLoading();
+
+      await fetch(`/techs/${id}`, {
+         method: 'DELETE'
+      });
+
+      dispatch({
+         type: 'DELETE_TECH',
+         payload: id
       });
    }
    catch(err)
