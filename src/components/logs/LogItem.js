@@ -8,7 +8,7 @@ const LogItem = ({ log }) => {
          <div>
             <a 
             href="#edit-log-modal" 
-            className={`model-trigger ${log.attention 
+            className={`modal-trigger ${log.attention 
             ? 'red-text' 
             : 'blue-text'}`}
             >
