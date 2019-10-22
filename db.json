@@ -1,11 +1,11 @@
 {
   "logs": [
     {
+      "id": 1,
       "message": "Change network card in server 007",
       "attention": false,
       "tech": "Sam Smith",
-      "date": "2019-10-22T05:44:41.865Z",
-      "id": 1
+      "date": "2019-10-22T08:27:37.551Z"
     },
     {
       "message": "Something",
@@ -15,25 +15,11 @@
       "id": 2
     },
     {
-      "message": "Hello",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2019-10-22T05:45:34.303Z",
-      "id": 3
-    },
-    {
-      "message": "asdfaswd",
+      "id": 6,
+      "message": "Hello There FerrariSDASD",
       "attention": true,
-      "tech": "Sara Wilson",
-      "date": "2019-10-22T05:46:15.826Z",
-      "id": 4
-    },
-    {
-      "message": "ashfdh",
-      "attention": false,
       "tech": "Sam Smith",
-      "date": "2019-10-22T05:46:53.354Z",
-      "id": 5
+      "date": "2019-10-22T08:29:27.579Z"
     }
   ],
   "techs": [
