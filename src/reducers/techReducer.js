@@ -18,11 +18,24 @@ export default (state: any = initialState, action: TechAction) =>
             ...state,
             techs: action.payload,
             loading: false
+         };
+      case 'ADD_TECH':
+         return {
+            ...state,
+            techs: [...state.techs, action.payload],
+            loading: false
          }
       case 'SET_LOADING':
          return {
             ...state,
             loading: true
+         };
+      case 'TECHS_ERROR':
+         console.error(action.payload)
+         return {
+            ...state,
+            error: action.payload,
+            loading: false
          }
       default:
          return state;

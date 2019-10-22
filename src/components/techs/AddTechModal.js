@@ -1,10 +1,13 @@
 // @flow
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addTech } from '../../actions/techActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import type { stringState } from '../types/stateTypes';
 
-const AddTechModal = () => {
+const AddTechModal = ({ addTech }) => {
    //$FlowFixMe
    const [firstName, setFirstName]: stringState = useState('');
    //$FlowFixMe
@@ -14,11 +17,16 @@ const AddTechModal = () => {
    {
       if(firstName === '' || lastName === '')
       {
-         M.toast({ html: 'Please enter the first and last name' })
+         M.toast({ html: 'Please enter the first and last name' });
       }
       else
       {
-         console.log(firstName, lastName);
+         addTech({
+            firstName,
+            lastName
+         });
+
+         M.toast({ html: `${firstName} ${lastName} was added as a tech` });
 
          //Clear Fields
          setFirstName('');
@@ -71,4 +79,8 @@ const AddTechModal = () => {
    );
 };
 
-export default AddTechModal;
+AddTechModal.propTypes = {
+   addTech: PropTypes.func.isRequired
+};
+
+export default connect(null, { addTech })(AddTechModal);
